@@ -20,11 +20,50 @@ To write a program to perform linear search and binary search using python progr
 i)	#Use a linear search method to match the item in a list.
 ```
 
-
+def linearsearch(a,k):
+    for i in range (0,len(a)):
+        if a[i]==k:
+            return i
+    return -1
+a=eval(input())
+k=eval(input())
+a.sort()
+res=linearsearch(a,k)
+if res ==-1:
+    print(a)
+    print("Element not found")
+else:
+    print(a)
+    print("Element found at index: ",res)
+    
 
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
+
+#developed by: RANJANI A
+#register number:212223230170
+
+def binary(array,key,low,high):
+    while(low<=high):
+        mid=low+(high-low)//2
+        if array[mid]==key:
+            return mid
+        elif array[mid]<key:
+            low=mid+1
+        elif array[mid]>key:
+            high=mid-1
+    return -1
+array=eval(input())
+key=int(input())
+array.sort()
+low,high=0,len(array)-1
+print(array)
+result=binary(array,key,low,high)
+if result==-1:
+    print("Element not found ")
+else:
+    print("Element found at index: ",result)
 
 
 
@@ -33,6 +72,31 @@ ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
+#developed by: RANJANI A
+#register number:212223230170
+
+def binary(array,key,low,high):
+    if high>=low:
+        mid=low+(high-low)//2
+        if array[mid]==key:
+            return mid
+        elif array[mid]<key:
+            return binary(array,key,mid+1,high)
+        elif array[mid]>key:
+            return binary(array,key,low,mid-1)
+    return -1
+array=eval(input())
+key=int(input())
+array.sort()
+low,high=0,len(array)-1
+print(array)
+result=binary(array,key,low,high)
+if result==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",result)
+
+
 
 
 
@@ -42,6 +106,9 @@ iii)	# Find the element in a list using Binary Search (recursive Method).
 ## Sample Input and Output
 
 
+![Screenshot (203)](https://github.com/Ranjania2005/Search-Algorithms/assets/151624950/ed3a90ec-8319-4bd3-b048-cdb348c789b8)
+![Screenshot (204)](https://github.com/Ranjania2005/Search-Algorithms/assets/151624950/9cbd5296-e74c-4f56-a230-8c8e79b62f62)
+![Screenshot (205)](https://github.com/Ranjania2005/Search-Algorithms/assets/151624950/54b1cc6f-9687-4752-bab4-551499be881b)
 
 
 
